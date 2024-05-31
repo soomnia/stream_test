@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # 주식 데이터 로드
 @st.cache_data
 def load_stock_data(ticker):
-    data = yf.download(ticker, period="10y")
+    data = yf.download(ticker, period="5y")
     data.reset_index(inplace=True)
     return data.copy()
 
